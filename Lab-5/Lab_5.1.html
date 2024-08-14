@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+    <tr>
+        <td colspan="5"><input type="text" id="result"></td>
+    </tr>
+    <tr><br>
+        <td align="center"><button onclick="disp('0')">0</button></td>
+        <td align="center"><button onclick="disp('1')">1</button></td>
+        <td align="center"><button onclick="disp('2')">2</button></td>
+        <td align="center"><button onclick="disp('+')">+</button></td>
+    </tr>
+    <tr><br>
+        <td align="center"><button onclick="disp('3')">3</button></td>
+        <td align="center"><button onclick="disp('4')">4</button></td>
+        <td align="center"><button onclick="disp('5')">5</button></td>
+        <td align="center"><button onclick="disp('-')">-</button></td>
+    </tr>
+    <tr><br>
+        <td align="center"><button onclick="disp('6')">6</button></td>
+        <td align="center"><button onclick="disp('7')">7</button></td>
+        <td align="center"><button onclick="disp('8')">8</button></td>
+        <td align="center"><button onclick="disp('*')">*</button></td>
+    </tr>
+    <tr><br>
+        <td align="center"><button onclick="disp('')">C</button></td>
+        <td align="center"><button onclick="disp('9')">9</button></td>
+        <td align="center"><button onclick="disp('=')">=</button></td>
+        <td align="center"><button onclick="disp('/')">/</button></td>
+
+    </tr>
+    </table>
+</table>
+<script>
+    function disp(v){
+        document.getElementById('result').value += v;
+    }
+    function Clear(){
+        document.getElementById('result').value = ' '
+    }
+    function cal(){
+        ans = document.getElementById('result').value
+        x=eval(ans);
+        document.getElementById('result').value = x;
+    }
+</script>
+
+</body>
+</html>

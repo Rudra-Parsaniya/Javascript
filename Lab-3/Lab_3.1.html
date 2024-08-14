@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr= []
+    
+    var size = Number(prompt("Enter a size if array:"))
+    for (let i = 0; i < size; i++) {
+       arr[i] = Number(prompt("Eneter a element:"));
+
+    }
+    var max= arr[0]
+    for(let i = 1;i<size;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+              }
+              alert("Maximum element is: " + max);
+  </script>
+</body>
+
+</html>

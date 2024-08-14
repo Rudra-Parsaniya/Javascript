@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a" style="border: blue solid 2px;"><p>Mouse over me</p></div>
+    <script>
+        var a = document.getElementById("a");
+        a.ondblclick = function(){
+            console.log("Double click");
+        }
+        a.onmousedown = function(){
+            console.log("mouse down");
+        }
+        a.onmouseover = function(){
+            console.log("mouse over");
+        }
+        a.onmouseout = function(){
+            console.log("mouse out");
+        }
+        a.onmouseout = function(){
+            console.log("mouse out");
+        }
+        a.onmouseup = function(){
+            console.log("mouse up");
+        }
+
+    </script>
+</body>
+</html>

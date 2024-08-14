@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Include Bootstrap CSS (you can download it or use a CDN) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styling for the calculator */
+        .calculator-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .calculator-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 18px;
+            margin: 5px;
+            
+        } 
+        .orange{
+            background-color: orange;
+        }
+        .grey{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <input type="textbox">
+        <br>
+        <tr><td><button class="calculator-button btn  grey" onclick="clr()" >C</button></td>
+            <td><button class="calculator-button btn grey"  onclick="disp('+/-')">+/-</button></td>
+            <td><button class="calculator-button btn  grey"  onclick="disp('%')">%</button></td>
+            <td><button class="calculator-button btn orange"  onclick="disp('/')">/</button></td></tr>
+        <br>
+        <button class="calculator-button btn  "  onclick="disp('7')">7</button>
+        <button class="calculator-button btn  "  onclick="disp('8')">8</button>
+        <button class="calculator-button btn  "  onclick="disp('9')">9</button>
+        <button class="calculator-button btn orange " onclick="disp('X')">X</button>
+        <br>
+        <button class="calculator-button btn  "  onclick="disp('4')">4</button>
+        <button class="calculator-button btn  "  onclick="disp('5')">5</button>
+        <button class="calculator-button btn  "  onclick="disp('6')">6</button>
+        <button class="calculator-button btn orange "  onclick="disp('-')">-</button>
+        <br>
+        <button class="calculator-button btn  "  onclick="disp('1')">1</button>
+        <button class="calculator-button btn  "  onclick="disp('2')">2</button>
+        <button class="calculator-button btn  "  onclick="disp('3')">3</button>
+        <button class="calculator-button btn orange "  onclick="disp('+')">+</button>
+        <br>
+        <button class="calculator-button btn  "  onclick="disp('0')">0</button>
+        <button class="calculator-button btn  " onclick="disp('00')">00</button>
+        <button class="calculator-button btn  "  onclick="disp('.')">.</button>
+        <button class="calculator-button btn orange ">=</button>
+    </div>
+    <script>
+        const result = document.getElementById('result');
+        function disp(v){
+            document.getElementById('result').value += v;
+        }
+        function Clear(){
+            document.getElementById('result').value = ' '
+        }
+        function cal(){
+            ans = document.getElementById('result').value
+            x=eval(ans);
+            document.getElementById('result').value = x;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
